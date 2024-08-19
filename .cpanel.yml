@@ -1,0 +1,30 @@
+---
+
+deployment:
+
+  tasks:
+    - export DEPLOYPATH=/home/mesa/public_html
+
+    - cp -r * $DEPLOYPATH
+
+    # Step 2: Install Composer dependencies
+    - name: "Install Composer dependencies"
+      command: |
+        cd $DEPLOYPATH
+        composer install --no-dev --optimize-autoloader
+
+    # Step 3: Set the correct permissions
+    - name: "Set correct permissions"
+      command: |
+        find $DEPLOYPATH/writable -type d -exec chmod 775 {} \;
+        find $DEPLOYPATH/writable -type f -exec chmod 664 {} \;
+
+    # Step 5: Clear any caches (if applicable)
+    - name: "Clear caches"
+      command: |
+        php $DEPLOYPATH/public/index.php cache:clear
+
+    # Step 6: Run any post-deployment tasks
+    - name: "Run post-deployment tasks"
+      command: |
+        echo "Deployment complete!"
