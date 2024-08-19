@@ -17,8 +17,17 @@ class App extends BaseConfig
      * E.g., http://example.com/
      */
 //    public string $baseURL = 'https://mesa-control.local';
-	public string $baseURL = 'https://mesa-control.solveshop.xyz/';
-
+	public string $baseURL = '';
+	public function __construct () {
+		parent::__construct ();
+		if ( ENVIRONMENT === 'development' ) {
+			$this->baseURL = 'https://incidencias.local';
+		} else if ( ENVIRONMENT === 'production' ) {
+			$this->baseURL = 'https://incidencias.solvegsm.com';
+		} else {
+			$this->baseURL = 'http://localhost';
+		}
+	}
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.
