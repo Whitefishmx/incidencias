@@ -13,7 +13,7 @@
 	use DateTime;
 	
 	abstract class BaseController extends Controller {
-		public string $env          = 'LIVE';
+		
 		public int    $user         = 2;
 		public int    $errCode      = 200;
 		public array  $responseBody = [];

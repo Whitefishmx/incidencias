@@ -6,6 +6,8 @@
 			'signin' => [ 'Iniciar sesión', base_url ( 'signin' ) ],
 		],
 		'logout' => [
+			'reune' => [ 'Reune', base_url ( 'reune' ) ],
+			'redeco' => [ 'Redeco', base_url ( 'redeco' ) ],
 			'signout' => [ 'Cerrar sesión', base_url ( 'signout' ) ],
 			/**'forgot' => [ 'Recuperar contraseña', base_url ( 'forgot' ) ],**/
 		],

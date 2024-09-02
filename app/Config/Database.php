@@ -24,11 +24,11 @@
 		 * @var array<string, mixed>
 		 */
 		public array $default = [ 'DSN'          => '',
-		                          'hostname'     => 'localhost',
-		                          'username'     => 'bluebull_jarvis',
-		                          'password'     => 'BLu3BUll24',
-		                          'database'     => 'bluebull_sandbox',
-		                          'DBDriver'     => 'MySQLi',
+		                          'hostname'     => '',
+		                          'username'     => '',
+		                          'password'     => '',
+		                          'database'     => '',
+		                          'DBDriver'     => '',
 		                          'DBPrefix'     => '',
 		                          'pConnect'     => FALSE,
 		                          'DBDebug'      => TRUE,
