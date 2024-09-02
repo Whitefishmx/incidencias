@@ -3,7 +3,7 @@
 deployment:
 
   tasks:
-    - export DEPLOYPATH=/home/mesa/public_html
+    - export DEPLOYPATH=/home/incidencias/public_html
 
     - cp -r * $DEPLOYPATH
 
